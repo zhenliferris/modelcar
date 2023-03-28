@@ -1,7 +1,6 @@
-
 import cv2
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('vid1.mp4')
 
 def getImg(display= False,size=[480,240]):
     _, img = cap.read()
