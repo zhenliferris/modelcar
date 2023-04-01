@@ -40,32 +40,56 @@ class Motor():
         self.pwmD.start(0)
         self.mySpeed = 0
 
-    def move(self, frontSpeed=0.5, frontTurn=0, frontT=0, rearSpeed=0.5, rearTurn=0, rearT=0):
+    def move(self, frontSpeed=0.5, frontTurn=0, rearSpeed=0.5, rearTurn=0, t=0):
         frontSpeed *= 100
         frontTurn *= 70
         rearSpeed *= 100
         rearTurn *= 70
         frontLeftSpeed = frontSpeed-frontTurn
         frontRightSpeed = frontSpeed+frontTurn
+        rearLeftSpeed = rearSpeed-rearTurn
+        rearRightSpeed = rearSpeed+rearTurn
 
-        if leftSpeed > 100:
-            leftSpeed = 100
-        elif leftSpeed < -100:
-            leftSpeed = -100
-        if rightSpeed > 100:
-            rightSpeed = 100
-        elif rightSpeed < -100:
-            rightSpeed = -100
-        # print(leftSpeed,rightSpeed)
-        self.pwmA.ChangeDutyCycle(abs(leftSpeed))
-        self.pwmB.ChangeDutyCycle(abs(rightSpeed))
-        if leftSpeed > 0:
+        if frontLeftSpeed > 100:
+            frontLeftSpeed = 100
+        elif frontLeftSpeed < -100:
+            frontLeftSpeed = -100
+        if frontRightSpeed > 100:
+            frontRightSpeed = 100
+        elif frontRightSpeed < -100:
+            frontRightSpeed = -100
+        if rearLeftSpeed > 100:
+            rearLeftSpeed = 100
+        elif rearLeftSpeed < -100:
+            rearLeftSpeed = -100
+        if rearRightSpeed > 100:
+            rearRightSpeed = 100
+        elif rearRightSpeed < -100:
+            rearRightSpeed = -100
+
+        self.pwmA.ChangeDutyCycle(abs(frontLeftSpeed))
+        self.pwmB.ChangeDutyCycle(abs(frontRightSpeed))
+        self.pwmC.ChangeDutyCycle(abs(rearLeftSpeed))
+        self.pwmD.ChangeDutyCycle(abs(rearRightSpeed))
+        if frontLeftSpeed > 0:
             GPIO.output(self.In1A, GPIO.HIGH)
             GPIO.output(self.In2A, GPIO.LOW)
         else:
             GPIO.output(self.In1A, GPIO.LOW)
             GPIO.output(self.In2A, GPIO.HIGH)
-        if rightSpeed > 0:
+        if frontRightSpeed > 0:
+            GPIO.output(self.In1B, GPIO.HIGH)
+            GPIO.output(self.In2B, GPIO.LOW)
+        else:
+            GPIO.output(self.In1B, GPIO.LOW)
+            GPIO.output(self.In2B, GPIO.HIGH)
+        if rearLeftSpeed > 0:
+            GPIO.output(self.In1A, GPIO.HIGH)
+            GPIO.output(self.In2A, GPIO.LOW)
+        else:
+            GPIO.output(self.In1A, GPIO.LOW)
+            GPIO.output(self.In2A, GPIO.HIGH)
+        if rearRightSpeed > 0:
             GPIO.output(self.In1B, GPIO.HIGH)
             GPIO.output(self.In2B, GPIO.LOW)
         else:
@@ -83,16 +107,16 @@ class Motor():
 
 
 def main():
-    motor.move(0.5, 0, 2)
+    motor.move(0.5, 0, 0.5, 0, 2)
     motor.stop(2)
-    motor.move(-0.5, 0, 2)
+    motor.move(-0.5, 0, -0.5, 0, 2)
     motor.stop(2)
-    motor.move(0, 0.5, 2)
+    motor.move(0, 0.5, -0.5, 0, 2)
     motor.stop(2)
-    motor.move(0, -0.5, 2)
+    motor.move(0, -0.5, -0.5, 0, 2)
     motor.stop(2)
 
 
 if __name__ == '__main__':
-    motor = Motor(2, 3, 4, 22, 17, 27)
+    motor = Motor(2, 3, 4, 22, 17, 27, 13, 19, 26, 40, 16, 20)
     main()
