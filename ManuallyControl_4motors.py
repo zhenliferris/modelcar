@@ -7,14 +7,35 @@ kp.init()
 
 
 def main():
+    # normal movement
     if kp.getKey('UP'):
         motor.move(0.6, 0, 0.6, 0, 0.1)
     elif kp.getKey('DOWN'):
         motor.move(-0.6, 0, -0.6, 0, 0.1)
     elif kp.getKey('LEFT'):
-        motor.move(0.3, 0.3, 0.3, 0.3, 0.1)
+        motor.move(0, 0.4, 0, 0, 0.1)
     elif kp.getKey('RIGHT'):
-        motor.move(0.3, -0.3, 0.3, -0.3, 0.1)
+        motor.move(0, -0.4, 0, 0, 0.1)
+    # special movement
+    # shifting
+    elif kp.getKey('a'):
+        motor.move(0, 0.4, 0, -0.4, 0.1)
+    elif kp.getKey('d'):
+        motor.move(0, -0.4, 0, 0.4, 0.1)
+    # diagonal movement
+    elif kp.getKey('q'):
+        motor.move(0.14, 0.2, 0.14, -0.2, 0.1)
+    elif kp.getKey('e'):
+        motor.move(0.14, -0.2, 0.14, 0.2, 0.1)
+    elif kp.getKey('z'):
+        motor.move(-0.14, 0.2, -0.14, -0.2, 0.1)
+    elif kp.getKey('c'):
+        motor.move(-0.14, -0.2, -0.14, 0.2, 0.1)
+    # spping
+    elif kp.getKey('w'):
+        motor.move(0, 0.4, 0, 0.4, 0.1)
+    elif kp.getKey('x'):
+        motor.move(0, -0.4, 0, -0.4, 0.1)
     else:
         motor.stop(0.1)
 
