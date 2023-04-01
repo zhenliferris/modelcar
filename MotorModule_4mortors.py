@@ -84,17 +84,17 @@ class Motor():
             GPIO.output(self.In1B, GPIO.LOW)
             GPIO.output(self.In2B, GPIO.HIGH)
         if rearLeftSpeed > 0:
-            GPIO.output(self.In1A, GPIO.HIGH)
-            GPIO.output(self.In2A, GPIO.LOW)
+            GPIO.output(self.In1C, GPIO.HIGH)
+            GPIO.output(self.In2C, GPIO.LOW)
         else:
-            GPIO.output(self.In1A, GPIO.LOW)
-            GPIO.output(self.In2A, GPIO.HIGH)
+            GPIO.output(self.In1C, GPIO.LOW)
+            GPIO.output(self.In2C, GPIO.HIGH)
         if rearRightSpeed > 0:
-            GPIO.output(self.In1B, GPIO.HIGH)
-            GPIO.output(self.In2B, GPIO.LOW)
+            GPIO.output(self.In1D, GPIO.HIGH)
+            GPIO.output(self.In2D, GPIO.LOW)
         else:
-            GPIO.output(self.In1B, GPIO.LOW)
-            GPIO.output(self.In2B, GPIO.HIGH)
+            GPIO.output(self.In1D, GPIO.LOW)
+            GPIO.output(self.In2D, GPIO.HIGH)
         sleep(t)
 
     def stop(self, t=0):
