@@ -1,3 +1,4 @@
+
 from MotorModule import Motor
 import KeyPressModule as kp
 
@@ -7,13 +8,13 @@ kp.init()
 
 def main():
     if kp.getKey('UP'):
-        motor.move(0.6,0,0.1)
+        motor.move(0.2,0,0.1)
     elif kp.getKey('DOWN'):
-        motor.move(-0.6,0,0.1)
+        motor.move(-0.2,0,0.1)
     elif kp.getKey('LEFT'):
-        motor.move(0.3,0.3,0.1)
+        motor.move(0.2,0.2,0.1)
     elif kp.getKey('RIGHT'):
-        motor.move(0.3,-0.3,0.1)
+        motor.move(0.2,-0.2,0.1)
     else:
         motor.stop(0.1)
 
