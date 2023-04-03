@@ -115,8 +115,8 @@ def main():
     motor.stop(2)
     motor.move(0, -0.5, -0.5, 0, 2)
     motor.stop(2)
-###################
+
 
 if __name__ == '__main__':
-    motor = Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
+    motor = Motor(2, 3, 4, 22, 17, 27, 13, 19, 26, 21, 16, 20)
     main()
