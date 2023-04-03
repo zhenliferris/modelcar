@@ -1,4 +1,4 @@
-from MotorModule_4mortors import Motor
+from MotorModule_4motors import Motor
 import KeyPressModule as kp
 
 # define motor by gpio pinout number

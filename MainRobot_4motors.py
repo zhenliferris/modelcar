@@ -12,20 +12,20 @@ def main():
     img = WebcamModule.getImg()
     curveVal = getLaneCurve(img, 1)
 
-    sen = 1.3  # SENSITIVITY
+    sen = 1.8  # SENSITIVITY
     maxVAl = 0.3  # MAX SPEED
     if curveVal > maxVAl:
         curveVal = maxVAl
     if curveVal < -maxVAl:
         curveVal = -maxVAl
     # print(curveVal)
-    if curveVal > 0:
-        sen = 1.7
-        if curveVal < 0.05:
-            curveVal = 0
-    else:
-        if curveVal > -0.08:
-            curveVal = 0
+    #if curveVal > 0:
+        #sen = 1.8
+    #    if curveVal < 0.05:
+    #        curveVal = 0
+    #else:
+    #    if curveVal > -0.08:
+    #        curveVal = 0
     turnVal = curveVal*sen
     if turnVal == 0:
         motor.move(0.20, 0, 0.20, 0, 0.05)
