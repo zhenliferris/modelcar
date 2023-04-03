@@ -2,7 +2,7 @@ from MotorModule_4mortors import Motor
 import KeyPressModule as kp
 
 # define motor by gpio pinout number
-motor = Motor(2, 3, 4, 22, 17, 27, 13, 19, 26, 21, 16, 20)
+motor = Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
 kp.init()
 
 
