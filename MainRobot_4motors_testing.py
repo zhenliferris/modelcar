@@ -1,6 +1,7 @@
 from MotorModule_4motors import Motor
 from LaneModule import getLaneCurve
 import WebcamModule
+import cv2
 
 ###########################################################
 motor = Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
@@ -29,7 +30,7 @@ def main():
     turnVal = curveVal*sen
 
     motor.move(0.20, -turnVal, 0.20, -turnVal, 0.05)
-    # cv2.waitKey(1)
+    cv2.waitKey(1)
 
 
 if __name__ == '__main__':
