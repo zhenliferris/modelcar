@@ -11,7 +11,8 @@ motor = Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
 def main():
 
     img = WebcamModule.getImg()
-    curveVal = getLaneCurve(img, 2)
+    # for testing, using set 2, for performance using 1
+    curveVal = getLaneCurve(img, 1)
 
     sen = 0.5 # SENSITIVITY
     maxVAl = 0.3  # MAX SPEED
