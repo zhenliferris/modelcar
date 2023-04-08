@@ -1,4 +1,4 @@
-import WebcamModule as wM
+import CamModule as cM
 import DataCollectionModule as dcM
 import JoyStickModule as jsM
 import MotorModule_4motors as mM
@@ -20,7 +20,7 @@ while True:
         record +=1
         sleep(0.300)
     if record == 1:
-        img = wM.getImg(True,size=[240,120])
+        img = cM.getImg(True,size=[240,120])
         dcM.saveData(img,steering)
     elif record == 2:
         dcM.saveLog()

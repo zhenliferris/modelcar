@@ -1,6 +1,7 @@
 from MotorModule_4motors import Motor
 import KeyPressModule as kp
 
+
 # define motor by BCM pinout number
 motor = Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
 kp.init()
