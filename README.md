@@ -9,8 +9,6 @@
 # https://www.shellhacks.com/raspberry-pi-force-hdmi-hotplug/
 # https://www.raspberrypi.com/documentation/computers/config_txt.html#video-options
 # https://github.com/murtazahassan/Neural-Networks-Self-Driving-Car-Raspberry-Pi
-# 
-
 
 
 # Hardware List
@@ -26,7 +24,13 @@
 # 10. Cables and Screws
 
 
-# Manually control: 
+# 00 Perameters finders and Code Testing
+# 1. CodeTester
+# 2. ColorPickerScript
+# 3. vid1.mp4
+
+
+# 01 Manually control: 
 # 1. JoyStickModule 
 # 2. KeyPressModule  
 # 3. MotorModule_4motors 
@@ -34,13 +38,7 @@
 # 5. ManuallyStickControl
 
 
-# Perameters finders and Code Testing
-# 1. CodeTester
-# 2. ColorPickerScript
-# 3. vid1.mp4
-
-
-# Autonomous Model Car by Image Processing.
+# 02 Autonomous Model Car by Image Processing.
 # 1. LaneModule
 # 2. MainRobot_4motors
 # 3. MOtorModule_4motors
@@ -50,7 +48,7 @@
 
 
 
-# Autonomous Model Car by Neural Networks
+# 03 Autonomous Model Car by Neural Networks
 # 1. CamModule
 # 2. DataCollectionMain
 # 3. DataCollectionModule
