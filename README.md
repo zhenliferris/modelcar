@@ -1,9 +1,16 @@
 # Use Raspberry Pi to control model car following path.
 
-# Referance
-# Online course: https://www.computervision.zone/courses/self-driving-car-using-raspberry-pi/
-# https://www.raspberrypi.com/
+# Reference
+# https://www.computervision.zone/courses/self-driving-car-using-raspberry-pi/
+# https://www.raspberrypi.com/documentation/computers/camera_software.html
 # https://www.pygame.org/docs/ref/joystick.html
+# https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/
+# https://github.com/raspberrypi/libcamera-apps/issues/487
+# https://www.shellhacks.com/raspberry-pi-force-hdmi-hotplug/
+# https://www.raspberrypi.com/documentation/computers/config_txt.html#video-options
+# https://github.com/murtazahassan/Neural-Networks-Self-Driving-Car-Raspberry-Pi
+# 
+
 
 
 # Hardware List
@@ -43,7 +50,7 @@
 
 
 
-# Autonomous Model Car by Neural Network
+# Autonomous Model Car by Neural Networks
 # 1. CamModule
 # 2. DataCollectionMain
 # 3. DataCollectionModule
