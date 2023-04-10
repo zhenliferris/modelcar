@@ -15,7 +15,7 @@ while True:
     #print(joyVal)
     steering = joyVal['axis1']
     throttle = joyVal['o']*maxThrottle
-    if joyVal['share'] == 1:
+    if joyVal['t'] == 1:
         if record ==0: print('Recording Started ...')
         record +=1
         sleep(0.300)
