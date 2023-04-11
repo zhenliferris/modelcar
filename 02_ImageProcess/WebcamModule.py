@@ -2,7 +2,7 @@ import cv2
 import utlis
 
 cap = cv2.VideoCapture(0)
-intialTrackBarVals = [114, 109, 32, 231]
+intialTrackBarVals = [114, 103, 32, 231]
 utlis.initializeTrackbars(intialTrackBarVals)
 
 

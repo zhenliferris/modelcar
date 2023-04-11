@@ -14,18 +14,18 @@ def main():
     # for testing, using set 2, for performance using 1
     curveVal = getLaneCurve(img, 1)
 
-    sen = 0.5  # SENSITIVITY
-    maxVAl = 0.3  # MAX SPEED
+    sen = 0.9  # SENSITIVITY
+    maxVAl = 0.1  # MAX SPEED
     if curveVal > maxVAl:
         curveVal = maxVAl
     if curveVal < -maxVAl:
         curveVal = -maxVAl
     print(curveVal)
     if curveVal > 0:
-        if curveVal < 0.05:
+        if curveVal < 0.03:
             curveVal = 0
     else:
-        if curveVal > -0.08:
+        if curveVal > -0.03:
             curveVal = 0
 
     turnVal = -curveVal*sen
