@@ -19,7 +19,7 @@ while True:
         if record == 0:
             print('Recording Started ...')
         record += 1
-        sleep(0.300)
+        sleep(0.1)
     if record == 1:
         img = cM.getImg(True, size=[240, 120])
         dcM.saveData(img, steering)
