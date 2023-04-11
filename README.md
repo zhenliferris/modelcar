@@ -33,15 +33,15 @@
 # 01 Manually control: 
 # 1. JoyStickModule 
 # 2. KeyPressModule  
-# 3. MotorModule_4motors 
-# 4. ManuallyControl_4motors 
+# 3. MotorModule
+# 4. ManuallyKeyboardControl
 # 5. ManuallyStickControl
 
 
 # 02 Autonomous Model Car by Image Processing.
 # 1. LaneModule
-# 2. MainRobot_4motors
-# 3. MOtorModule_4motors
+# 2. MainRobot
+# 3. MotorModule
 # 4. Utlis
 # 5. vid1.mp4
 # 6. WebcamModule
@@ -53,5 +53,7 @@
 # 2. DataCollectionMain
 # 3. DataCollectionModule
 # 4. JoyStickModule
-# 5. MotorModule_4motors
-# 6. Utlis
+# 5. MotorModule
+# 6. utlis
+# 7. Training
+# 8. AutonomousNN
