@@ -42,7 +42,7 @@ def importDataInfo(path):
 
 def balanceData(data, display=True):
     nBin = 31
-    samplesPerBin = 300
+    samplesPerBin = 260
     hist, bins = np.histogram(data['Steering'], nBin)
     if display:
         center = (bins[:-1] + bins[1:]) * 0.5
