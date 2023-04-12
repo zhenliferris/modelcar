@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from keras.models import load_model
+import tensorflow as tf
 
 import CamModule as cM
 import MotorModule as mM
@@ -8,7 +8,7 @@ import MotorModule as mM
 steeringSen = 0.70  # Steering Sensitivity
 maxThrottle = 0.22  # Forward Speed %
 motor = mM.Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
-model = load_model('/home/pi/Desktop/My Files/RpiRobot/model_V1.h5')
+model = tf.lite.Interpreter('model.tflite')
 
 
 def preProcess(img):
