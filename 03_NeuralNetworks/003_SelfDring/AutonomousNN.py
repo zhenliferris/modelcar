@@ -1,14 +1,14 @@
 import cv2
 import numpy as np
-import tensorflow as tf
+from tensorflow.keras.models import load_model  # works on Raspberry Pi
 
 import CamModule as cM
 import MotorModule as mM
 
 steeringSen = 0.70  # Steering Sensitivity
-maxThrottle = 0.22  # Forward Speed %
+maxThrottle = 0.15  # Forward Speed %
 motor = mM.Motor(22, 27, 17, 2, 4, 3, 13, 19, 26, 21, 16, 20)
-model = tf.lite.Interpreter('model.tflite')
+model = load_model('model.h5')
 
 
 def preProcess(img):
