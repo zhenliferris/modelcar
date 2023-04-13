@@ -57,3 +57,29 @@
 # 6. utlis
 # 7. Training
 # 8. AutonomousNN
+
+remake a bootdisk with bullseye 64bit 
+    3  sudo raspi-config
+    4  ls
+    5  cd test
+    6  git clone https://github.com/zhenliferris/test.git
+    7  sudo apt -update
+    8  sudo apt update
+    9  sudo apt upgrade
+   10  sudo apt install libatlas-base-dev
+   11  pip3 install tensorflow
+   12  python -V
+   13  sudo apt install python3-opencv
+   
+   15  sudo pip install keras
+   16  sudo raspistill -o cam.jpg
+   17  sudo raspi-config
+   18  sudo reboot
+   19  cd test
+   20  git pull
+   21  ls
+   22  cd test
+   23  ls
+   24  git pull
+
+   26  sudo apt-get install vokoscreen -y
