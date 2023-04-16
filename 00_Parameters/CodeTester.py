@@ -128,7 +128,7 @@
 #     motor= Motor(2,3,4,22,17,27)
 #     main()
 
-import cv2
+# import cv2
 # import numpy as np
 # import utlis
 

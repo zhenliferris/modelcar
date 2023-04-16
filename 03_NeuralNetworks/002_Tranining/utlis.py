@@ -153,7 +153,7 @@ def createModel():
     model.compile(Adam(lr=0.0001), loss='mse')
     return model
 
-# STEP 8 - TRAINNING
+# STEP 8 - TRAINING
 
 
 def dataGen(imagesPath, steeringList, batchSize, trainFlag):
