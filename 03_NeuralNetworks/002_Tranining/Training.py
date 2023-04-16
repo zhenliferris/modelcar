@@ -33,7 +33,7 @@ print('Total Validation Images: ', len(xVal))
 # STEP 7 - CREATE MODEL
 model = createModel()
 
-# STEP 8 - TRAINNING
+# STEP 8 - TRAINING
 history = model.fit(dataGen(xTrain, yTrain, 100, 1),
                     steps_per_epoch=100,
                     epochs=10,
