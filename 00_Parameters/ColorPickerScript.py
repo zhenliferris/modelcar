@@ -25,7 +25,6 @@ cv2.createTrackbar("SAT Max", "HSV", 255, 255, empty)
 cv2.createTrackbar("VALUE Min", "HSV", 0, 255, empty)
 cv2.createTrackbar("VALUE Max", "HSV", 255, 255, empty)
 
-cap = cv2.VideoCapture(0)
 frameCounter = 0
 #  reads each frame from the video capture object and applies a color filter based on the trackbar values.
 while True:
