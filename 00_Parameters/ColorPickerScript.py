@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 
-# captures video from the default camera (device index 0) and sets the frame width and height to 480 and 240 respectively.
-frameWidth = 480
-frameHeight = 240
+# captures video from the default camera (device index 0) and sets the frame width and height to 240 and 120 respectively.
+frameWidth = 240
+frameHeight = 120
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
@@ -17,7 +17,7 @@ def empty(a):
 
 # creates a window named “HSV” and sets up trackbars for HUE Min, HUE Max, SAT Min, SAT Max, VALUE Min and VALUE Max
 cv2.namedWindow("HSV")
-cv2.resizeWindow("HSV", 480, 240)
+cv2.resizeWindow("HSV", 240, 120)
 cv2.createTrackbar("HUE Min", "HSV", 0, 179, empty)
 cv2.createTrackbar("HUE Max", "HSV", 179, 179, empty)
 cv2.createTrackbar("SAT Min", "HSV", 0, 255, empty)
