@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
 
-# captures video from the default camera (device index 0) and sets the frame width and height to 240 and 120 respectively.
-frameWidth = 240
-frameHeight = 120
+# captures video from the default camera (device index 0) and sets the frame width and height to 480 and 240 respectively.
+# the captured images will corrupt if set other pixels
+frameWidth = 480
+frameHeight = 240
 cap = cv2.VideoCapture(0)
 cap.set(3, frameWidth)
 cap.set(4, frameHeight)
