@@ -6,7 +6,7 @@ curveList = []
 avgVal = 10
 
 
-def getLaneCurve(img, display=2):
+def getLaneCurve(img, display=1):
 
     imgCopy = img.copy()
     imgResult = img.copy()
@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
         success, img = cap.read()
         img = cv2.resize(img, (480, 240))
-        curve = getLaneCurve(img, display=2)
+        curve = getLaneCurve(img, display=1)
         print(curve)
         # cv2.imshow('Vid',img)
         cv2.waitKey(1)
