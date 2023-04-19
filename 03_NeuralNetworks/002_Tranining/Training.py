@@ -22,7 +22,7 @@ imagesPath, steerings = loadData(path, data)
 
 # STEP 4 - SPLIT FOR TRAINING AND VALIDATION
 xTrain, xVal, yTrain, yVal = train_test_split(imagesPath, steerings,
-                                              test_size=0.2, random_state=10)
+                                              test_size=0.20, random_state=10)
 print('Total Training Images: ', len(xTrain))
 print('Total Validation Images: ', len(xVal))
 
@@ -35,7 +35,7 @@ model = createModel()
 
 # STEP 8 - TRAINING
 history = model.fit(dataGen(xTrain, yTrain, 100, 1),
-                    steps_per_epoch=100,
+                    steps_per_epoch=300,
                     epochs=10,
                     validation_data=dataGen(xVal, yVal, 50, 0),
                     validation_steps=50)

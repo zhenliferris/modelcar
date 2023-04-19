@@ -25,7 +25,7 @@ def importDataInfo(path):
     columns = ['Center', 'Steering']
     noOfFolders = len(os.listdir(path))//2
     data = pd.DataFrame()
-    for x in range(17, 22):
+    for x in [0, 1, 2, 3, 4, 5, 7, 8, 9, 10]:
         dataNew = pd.read_csv(os.path.join(
             path, f'log_{x}.csv'), names=columns)
         print(f'{x}:{dataNew.shape[0]} ', end='')
@@ -42,7 +42,7 @@ def importDataInfo(path):
 
 def balanceData(data, display=True):
     nBin = 31
-    samplesPerBin = 260
+    samplesPerBin = 3000
     hist, bins = np.histogram(data['Steering'], nBin)
     if display:
         center = (bins[:-1] + bins[1:]) * 0.5
