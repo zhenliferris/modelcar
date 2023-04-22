@@ -22,15 +22,16 @@
 # 8. Bluetooth Keyboard and Mouse 
 # 9. PS4 Whireless Controller
 # 10. Cables and Screws
+# 11. 3D printed parts
 
 
-# 00 Perameters finders and Code Testing
+# 00 Perameters finders and Code Testing:
 # 1. CodeTester
 # 2. ColorPickerScript
 # 3. vid1.mp4
 
 
-# 01 Manually control: 
+# 01 Manually control:
 # 1. JoyStickModule 
 # 2. KeyPressModule  
 # 3. MotorModule
@@ -38,7 +39,7 @@
 # 5. ManuallyStickControl
 
 
-# 02 Autonomous Model Car by Image Processing.
+# 02 Autonomous Model Car by Image Processing:
 # 1. LaneModule
 # 2. MainRobot
 # 3. MotorModule
@@ -48,7 +49,7 @@
 
 
 
-# 03 Autonomous Model Car by Neural Networks
+# 03 Autonomous Model Car by Neural Networks:
 # 1. CamModule
 # 2. DataCollectionMain
 # 3. DataCollectionModule
@@ -58,28 +59,15 @@
 # 7. Training
 # 8. AutonomousNN
 
-remake a bootdisk with bullseye 64bit 
-    3  sudo raspi-config
-    4  ls
-    5  cd test
-    6  git clone https://github.com/zhenliferris/test.git
-    7  sudo apt -update
-    8  sudo apt update
-    9  sudo apt upgrade
-   10  sudo apt install libatlas-base-dev
-   11  pip3 install tensorflow
-   12  python -V
-   13  sudo apt install python3-opencv
+# system backup
+# remake a bootdisk with bullseye 64bit image and add the required libraries
+# using disk tools to regain 100GB lost sd capcity, if using sd card copier from Raspberry Pi at 128GB SDHC card
+#      sudo raspi-config 
+#      git clone https://github.com/zhenliferris/modelcar.git
+#      sudo apt update
+#      sudo apt upgrade
+#      sudo apt install libatlas-base-dev
+#      pip3 install tensorflow
+#      sudo apt install python3-opencv
+#      sudo pip install keras
    
-   15  sudo pip install keras
-   16  sudo raspistill -o cam.jpg
-   17  sudo raspi-config
-   18  sudo reboot
-   19  cd test
-   20  git pull
-   21  ls
-   22  cd test
-   23  ls
-   24  git pull
-
-   26  sudo apt-get install vokoscreen -y
