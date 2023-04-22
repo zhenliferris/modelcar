@@ -22,7 +22,7 @@ imagesPath, steerings = loadData(path, data)
 
 # STEP 4 - SPLIT FOR TRAINING AND VALIDATION
 xTrain, xVal, yTrain, yVal = train_test_split(imagesPath, steerings,
-                                              test_size=0.20, random_state=10)
+                                              test_size=0.05, random_state=10)
 print('Total Training Images: ', len(xTrain))
 print('Total Validation Images: ', len(xVal))
 
@@ -35,13 +35,14 @@ model = createModel()
 
 # STEP 8 - TRAINING
 history = model.fit(dataGen(xTrain, yTrain, 100, 1),
-                    steps_per_epoch=300,
+                    steps_per_epoch=100,
                     epochs=10,
                     validation_data=dataGen(xVal, yVal, 50, 0),
                     validation_steps=50)
 
 # STEP 9 - SAVE THE MODEL
-model.save('model.h5')
+model.save(
+    r'C:\python\modelcar\modelcar\03_NeuralNetworks\003_SelfDring\model_new.h5')
 print('Model Saved')
 
 # STEP 10 - PLOT THE RESULTS
